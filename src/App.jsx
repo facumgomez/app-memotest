@@ -42,8 +42,18 @@ const App = () => {
     };
   };
 
+  const handleRestart = () => {
+    const shuffledEmojis = shuffledArray([...emojis, ...emojis]);
+    setShuffledMemoBlock(shuffledEmojis.map((e,i) => ({index: i, e, flipped: false})));
+    setSelectMemoBlock(null);
+    setAnimation(false);
+  };
+
   return (
-    <Board memoBlocks={shuffledMemoBlock} animation={animation} handleMemoBlock={handleMemoBlock} />
+    <div>
+      <Board memoBlocks={shuffledMemoBlock} animation={animation} handleMemoBlock={handleMemoBlock} />
+      <button className='restartButton' onClick={handleRestart}>Restart</button>
+    </div>
   );
 }
 

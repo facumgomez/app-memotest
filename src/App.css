@@ -1,5 +1,8 @@
 body {
-  background-color: #6A5B6E;
+  background-image: url('./assets/fondo.png');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
 }
 
 .logo {
@@ -10,7 +13,6 @@ body {
 
 #logoMemo {
   width: 250px;
-  border-radius: 20px;
 }
 
 .board {
